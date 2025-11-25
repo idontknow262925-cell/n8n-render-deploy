@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
-# Install n8n globally with specific working version
-RUN npm install -g n8n@1.0.0
+# Install n8n
+RUN npm install -g n8n
 
 # Create app directory
 WORKDIR /app
@@ -13,5 +13,5 @@ EXPOSE 5678
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 
-# Start n8n (different syntax)
+# Start n8n
 CMD n8n start
